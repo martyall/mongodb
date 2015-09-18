@@ -18,34 +18,56 @@ You can write helper functions for checking the data and writing the files, but 
 """
 import csv
 import pprint
+import time
+import re
+
 
 INPUT_FILE = 'autos.csv'
 OUTPUT_GOOD = 'autos-valid.csv'
 OUTPUT_BAD = 'FIXME-autos.csv'
 
-def process_file(input_file, output_good, output_bad):
 
+def get_year(t):
+    try:
+        time_obj = time.strptime(t, "%Y-%m-%dT%H:%M:%S+02:00")
+    except ValueError:
+        return None
+    year = time_obj.tm_year 
+    return year 
+
+
+def process_file(input_file, output_good, output_bad):
+    re_db = re.compile(r'dbpedia.org')
     with open(input_file, "r") as f:
         reader = csv.DictReader(f)
         header = reader.fieldnames
-
-        #COMPLETE THIS FUNCTION
-
-
-
-    # This is just an example on how you can use csv.DictWriter
-    # Remember that you have to output 2 files
-    with open(output_good, "w") as g:
-        writer = csv.DictWriter(g, delimiter=",", fieldnames= header)
-        writer.writeheader()
-        for row in YOURDATA:
-            writer.writerow(row)
-
+        with open(output_good, "w") as good:
+            good_writer = csv.DictWriter(good, header)
+            good_writer.writeheader()
+            with open(output_bad, "w") as bad:
+                bad_writer = csv.DictWriter(bad, header)
+                bad_writer.writeheader()
+                for row in reader:
+                    if re_db.search(row["URI"]):
+                        year = get_year(row["productionStartYear"])
+                        #print year
+                        if year <= 2014 and year >= 1886:
+                            good_writer.writerow(row)
+                            #print "good"
+                        else:
+                            bad_writer.writerow(row)
+                            #print "bad"
+                          
 
 def test():
 
     process_file(INPUT_FILE, OUTPUT_GOOD, OUTPUT_BAD)
 
+    with open(OUTPUT_GOOD) as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            year = get_year(row["productionStartYear"])
+            print year <= 2014 and year >= 1886
 
 if __name__ == "__main__":
     test()

@@ -38,7 +38,12 @@ def get_db(db_name):
 
 def make_pipeline():
     # complete the aggregation pipeline
-    pipeline = [ ]
+    pipeline = [{'$match': {'user.followers_count': {'$gte': 100}, 'user.time_zone': 'Brasilia'}},
+                {'$project': {'screen_name': '$user.screen_name', 'followers': '$user.followers_count',
+                              'tweets': "$user.statuses_count"}},
+                {'$sort': {'followers': -1}},
+                {'$limit': 1}]
+                            
     return pipeline
 
 def aggregate(db, pipeline):

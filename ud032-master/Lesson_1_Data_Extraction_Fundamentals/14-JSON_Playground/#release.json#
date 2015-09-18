@@ -1,0 +1,147 @@
+{
+  "barcode": null,
+  "country": "GB",
+  "date": "1969",
+  "disambiguation": "",
+  "id": "0b44cb36-550a-491d-bfd9-8751271f9de7",
+  "packaging": null,
+  "quality": "normal",
+  "release-events": [
+    {
+      "area": {
+        "disambiguation": "",
+        "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+        "iso_3166_1_codes": [
+          "GB"
+        ],
+        "iso_3166_2_codes": [],
+        "iso_3166_3_codes": [],
+        "name": "United Kingdom",
+        "sort-name": "United Kingdom"
+      },
+      "date": "1969"
+    }
+  ],
+  "status": "Official",
+  "text-representation": {
+    "language": "eng",
+    "script": "Latn"
+  },
+  "title": "To Markos III"
+}
+
+{u'count': 22, u'offset': 0, u'artists': [{u'name': u'The Beatles', u'area': {u'sort-name': u'U
+nited Kingdom', u'id': u'8a754a16-0027-3a29-b6d7-2b40ea0481ed', u'name': u'United Kingdom'}, u'
+country': u'GB', u'life-span': {u'ended': True, u'begin': u'1957-03', u'end': u'1970-04-10'}, u
+'tags': [{u'count': 2, u'name': u'uk'}, {u'count': 8, u'name': u'rock'}, {u'count': 1, u'name':
+ u'english'}, {u'count': 1, u'name': u'overrated'}, {u'count': 1, u'name': u'parlophone'}, {u'c
+ount': 1, u'name': u'60s'}, {u'count': 1, u'name': u'pop-rock'}, {u'count': 1, u'name': u'pop/r
+ock'}, {u'count': 1, u'name': u'psychedelic pop'}, {u'count': 1, u'name': u'rock & roll'}, {u'c
+ount': 1, u'name': u'heavy metal'}, {u'count': 2, u'name': u'classical pop'}, {u'count': 1, u'n
+ame': u'instrumental pop'}, {u'count': 1, u'name': u'folk-rock'}, {u'count': 1, u'name': u'orch
+estral'}, {u'count': 1, u'name': u'psychedelic'}, {u'count': 2, u'name': u'merseybeat'}, {u'cou
+nt': 1, u'name': u'rock roll'}, {u'count': 1, u'name': u'adult alternative pop rock'}, {u'count
+': 1, u'name': u'tribute albums'}, {u'count': 1, u'name': u'british psychedelia'}, {u'count': 1
+, u'name': u'orchestral pop'}, {u'count': 1, u'name': u'singer songwriter'}, {u'count': 1, u'na
+me': u'indie rock'}, {u'count': 2, u'name': u'british invasion'}, {u'count': 1, u'name': u'pop-
+metal'}, {u'count': 1, u'name': u'classic pop and rock'}, {u'count': 1, u'name': u'britpop'}, {
+u'count': 1, u'name': u'the-beatles'}, {u'count': 1, u'name': u'progressive rock'}, {u'count': 
+1, u'name': u'1'}, {u'count': 1, u'name': u'united kingdom'}, {u'count': 1, u'name': u'male voc
+alists'}, {u'count': 1, u'name': u'experimental'}, {u'count': 1, u'name': u'rock and roll'}, {u
+'count': 7, u'name': u'pop'}, {u'count': 2, u'name': u'liverpool'}, {u'count': 1, u'name': u'on
+e beatles'}, {u'count': 6, u'name': u'british'}, {u'count': 1, u'name': u'pop rock'}, {u'count'
+: 1, u'name': u'bbc'}, {u'count': 1, u'name': u'a filk artist'}, {u'count': 1, u'name': u'hair 
+metal'}, {u'count': 1, u'name': u'psychedelic rock'}, {u'count': 1, u'name': u'hard rock'}, {u'
+count': 1, u'name': u'80s'}], u'sort-name': u'Beatles, The', u'score': u'100', u'begin-area': {
+u'sort-name': u'Liverpool', u'id': u'c249c30e-88ab-4b2f-a745-96a25bd7afee', u'name': u'Liverpoo
+l'}, u'type': u'Group', u'id': u'b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d', u'aliases': [{u'name': 
+u'\ub354 \ube44\ud2c0\uc988', u'locale': u'ko', u'end-date': None, u'primary': True, u'sort-nam
+e': u'\ub354 \ube44\ud2c0\uc988', u'type': None, u'begin-date': None}, {u'name': u'\u30b6\u30fb
+\u30d3\u30fc\u30c8\u30eb\u30ba', u'locale': u'ja', u'end-date': None, u'primary': True, u'sort-
+name': u'\u30d3\u30fc\u30c8\u30eb\u30ba (\u30b6)', u'type': None, u'begin-date': None}, {u'name
+': u'Beatles', u'locale': None, u'end-date': None, u'primary': None, u'sort-name': u'Beatles', 
+u'type': None, u'begin-date': None}, {u'name': u'Beetles', u'locale': None, u'end-date': None, 
+u'primary': None, u'sort-name': u'Beetles', u'type': None, u'begin-date': None}, {u'name': u'fa
+b four', u'locale': None, u'end-date': None, u'primary': None, u'sort-name': u'fab four', u'typ
+e': None, u'begin-date': None}, {u'name': u'Los Beatles', u'locale': u'es', u'end-date': None, 
+u'primary': True, u'sort-name': u'Los Beatles', u'type': None, u'begin-date': None}, {u'name': 
+u'\u0411\u0438\u0442\u043b\u0437', u'locale': u'ru', u'end-date': None, u'primary': True, u'sor
+t-name': u'\u0411\u0438\u0442\u043b\u0437', u'type': None, u'begin-date': None}, {u'name': u'\u
+62ab\u5934\u58eb', u'locale': u'zh_Hans', u'end-date': None, u'primary': True, u'sort-name': u'
+\u62ab\u5934\u58eb', u'type': None, u'begin-date': None}, {u'name': u'\u62ab\u982d\u56db', u'lo
+cale': u'zh_Hant', u'end-date': None, u'primary': True, u'sort-name': u'\u62ab\u982d\u56db', u'
+type': None, u'begin-date': None}]}, {u'name': u'Beatles Back2Back', u'area': {u'sort-name': u'
+Australia', u'id': u'106e0bec-b638-3b37-b731-f53d507dc00e', u'name': u'Australia'}, u'country':
+ u'AU', u'disambiguation': u'The Beatles tribute band', u'life-span': {u'ended': None, u'begin'
+: u'2011'}, u'sort-name': u'Beatles Back2Back', u'score': u'100', u'type': u'Group', u'id': u'7
+cac6d47-ef4e-4347-8835-63ed3f2e74a7'}, {u'name': u'Counterfeit Beatles', u'area': {u'sort-name'
+: u'United Kingdom', u'id': u'8a754a16-0027-3a29-b6d7-2b40ea0481ed', u'name': u'United Kingdom'
+}, u'country': u'GB', u'disambiguation': u'The Beatles tribute band', u'life-span': {u'ended': 
+None}, u'sort-name': u'Counterfeit Beatles', u'score': u'100', u'type': u'Group', u'id': u'ad60
+d963-44f1-4b41-b785-8284edcaaffe'}, {u'sort-name': u'Beatles Chillout', u'life-span': {u'ended'
+: None}, u'score': u'100', u'id': u'3133aeb8-9982-4e11-a8ff-5477996a80bf', u'name': u'Beatles C
+hillout'}, {u'name': u'Tokyo Beatles', u'area': {u'sort-name': u'Japan', u'id': u'2db42837-c832
+-3c27-b4a3-08198f75693c', u'name': u'Japan'}, u'country': u'JP', u'disambiguation': u'Japanese'
+, u'life-span': {u'ended': None}, u'sort-name': u'Tokyo Beatles', u'score': u'100', u'begin-are
+a': {u'sort-name': u'Tokyo', u'id': u'8dc97297-ac95-4d33-82bc-e07fab26fb5f', u'name': u'Tokyo'}
+, u'id': u'bc569a61-dd62-4758-86c6-e99dcb1fdda6'}, {u'name': u'Fab Beatles', u'area': {u'sort-n
+ame': u'United Kingdom', u'id': u'8a754a16-0027-3a29-b6d7-2b40ea0481ed', u'name': u'United King
+dom'}, u'country': u'GB', u'life-span': {u'ended': None}, u'sort-name': u'Fab Beatles', u'score
+': u'100', u'type': u'Group', u'id': u'dc146c82-7709-41ee-8322-0d4c9fea0378'}, {u'name': u'Shit
+ty Beatles', u'area': {u'sort-name': u'Gainesville', u'id': u'dbe53871-db21-47ea-a0c3-3ab58317a
+3ab', u'name': u'Gainesville'}, u'disambiguation': u'Beatles Cover Band', u'life-span': {u'ende
+d': True, u'begin': u'2005', u'end': u'2015-04-19'}, u'sort-name': u'Shitty Beatles', u'score':
+ u'100', u'end-area': {u'sort-name': u'Gainesville', u'id': u'dbe53871-db21-47ea-a0c3-3ab58317a
+3ab', u'name': u'Gainesville'}, u'begin-area': {u'sort-name': u'Gainesville', u'id': u'dbe53871
+-db21-47ea-a0c3-3ab58317a3ab', u'name': u'Gainesville'}, u'type': u'Group', u'id': u'de0769fa-7
+c32-4706-9c8c-03631c90f208'}, {u'sort-name': u'Suck My Beatles', u'life-span': {u'ended': None}
+, u'score': u'80', u'id': u'75a2dff3-b370-4caa-9447-d9756d28243b', u'name': u'Suck My Beatles'}
+, {u'name': u'Not The Beatles', u'life-span': {u'ended': None, u'begin': u'1998'}, u'sort-name'
+: u'Not The Beatles', u'score': u'80', u'type': u'Group', u'id': u'f540dcbe-4ae8-45c7-817b-3722
+41202276'}, {u'name': u'The Backbeat Beatles', u'area': {u'sort-name': u'Liverpool', u'id': u'c
+249c30e-88ab-4b2f-a745-96a25bd7afee', u'name': u'Liverpool'}, u'life-span': {u'ended': None}, u
+'sort-name': u'Backbeat Beatles, The', u'score': u'80', u'type': u'Group', u'id': u'ec996b5f-89
+c8-4dd6-8063-1bd8df438a00'}, {u'name': u'The Tape-beatles', u'area': {u'sort-name': u'United St
+ates', u'id': u'489ce91b-6658-3307-9877-795b68554c98', u'name': u'United States'}, u'country': 
+u'US', u'life-span': {u'ended': None, u'begin': u'1986-12'}, u'sort-name': u'Tape-beatles, The'
+, u'score': u'80', u'begin-area': {u'sort-name': u'Iowa City', u'id': u'3fc3b364-665e-4875-a9ff
+-3699cd716152', u'name': u'Iowa City'}, u'type': u'Group', u'id': u'5e685f9e-83bb-423c-acfa-487
+e34f15ffd', u'aliases': [{u'name': u'Tape-Beatles', u'locale': None, u'end-date': None, u'prima
+ry': None, u'sort-name': u'Tape-Beatles', u'type': None, u'begin-date': None}]}, {u'name': u'Th
+e Savage Young Beatles', u'life-span': {u'ended': None}, u'sort-name': u'Savage Young Beatles, 
+The', u'score': u'80', u'type': u'Group', u'id': u'333b16c0-c1fc-4fa0-ab58-367adf2c8e2e'}, {u'n
+ame': u'The Beatles Revival Band', u'area': {u'sort-name': u'Germany', u'id': u'85752fda-13c4-3
+1a3-bee5-0e5cb1f51dad', u'name': u'Germany'}, u'country': u'DE', u'disambiguation': u'german co
+ver band', u'life-span': {u'ended': None, u'begin': u'1976'}, u'sort-name': u'Beatles Revival B
+and, The', u'score': u'80', u'type': u'Group', u'id': u'0f697bc6-6df7-41c9-b550-39981e520d70', 
+u'aliases': [{u'name': u'Beatles Revival Band', u'locale': None, u'end-date': None, u'primary':
+ None, u'sort-name': u'Beatles Revival Band', u'type': None, u'begin-date': None}]}, {u'name': 
+u'The Moog Beatles', u'life-span': {u'ended': None}, u'sort-name': u'Moog Beatles, The', u'scor
+e': u'80', u'type': u'Group', u'id': u'e67ffb2a-0d5e-472d-9f3b-02d2ed7adc9a'}, {u'sort-name': u
+'Black Beatles, The', u'life-span': {u'ended': None}, u'score': u'80', u'id': u'4c3d0136-9235-4
+c50-b136-be49d17163df', u'name': u'The Black Beatles'}, {u'name': u'The Better Beatles', u'life
+-span': {u'ended': None}, u'sort-name': u'Better Beatles, The', u'score': u'80', u'type': u'Gro
+up', u'id': u'7383113a-2b44-4fd1-a2b1-277ca68803b7'}, {u'name': u'The Beatles Revival', u'area'
+: {u'sort-name': u'Czech Republic', u'id': u'51d34c28-61bf-3d21-849f-7492672a9d44', u'name': u'
+Czech Republic'}, u'country': u'CZ', u'disambiguation': u"Czech 'The Beatles' tribute band", u'
+life-span': {u'ended': None}, u'sort-name': u'Beatles Revival, The', u'score': u'80', u'type': 
+u'Group', u'id': u'5153cd90-37c6-4fa0-8da6-dbf5513b4a44'}, {u'name': u'The Cavern Beatles', u'a
+rea': {u'sort-name': u'Liverpool', u'id': u'c249c30e-88ab-4b2f-a745-96a25bd7afee', u'name': u'L
+iverpool'}, u'disambiguation': u'Beatles Cover Band', u'life-span': {u'ended': None, u'begin': 
+u'1989'}, u'sort-name': u'Beatles Cover Band', u'score': u'80', u'begin-area': {u'sort-name': u
+'Liverpool', u'id': u'c249c30e-88ab-4b2f-a745-96a25bd7afee', u'name': u'Liverpool'}, u'type': u
+'Group', u'id': u'31f6812d-12ab-406f-a13d-ad54976e49c6'}, {u'name': u'Liverpool Lads a Beatles 
+Tribute', u'disambiguation': u'Beatles Tribute Band', u'life-span': {u'ended': None}, u'sort-na
+me': u'Liverpool Lads', u'score': u'70', u'type': u'Group', u'id': u'abdd68e9-cd78-453e-a0d6-31
+5dc73cf0e4'}, {u'name': u'Rain: A Tribute to the Beatles', u'disambiguation': u'Beatles Tribute
+ Band', u'life-span': {u'ended': None, u'begin': u'1975'}, u'sort-name': u'Rain', u'score': u'6
+0', u'type': u'Group', u'id': u'd4617e66-94f7-41c2-83ad-86c6e446f3a9'}, {u'name': u'All You Nee
+d Is Love: A Beatles Experience', u'area': {u'sort-name': u'United States', u'id': u'489ce91b-6
+658-3307-9877-795b68554c98', u'name': u'United States'}, u'country': u'US', u'life-span': {u'en
+ded': None, u'begin': u'2013'}, u'sort-name': u'All You Need Is Love: A Beatles Experience', u'
+score': u'50', u'type': u'Group', u'id': u'3b7bcc69-0c5d-47b2-9d3d-3f1aa8ffe4a1'}, {u'name': u'
+Jolly Joker and the Plastic Beatles of the Universe', u'area': {u'sort-name': u'Czech Republic'
+, u'id': u'51d34c28-61bf-3d21-849f-7492672a9d44', u'name': u'Czech Republic'}, u'country': u'CZ
+', u'life-span': {u'ended': None, u'begin': u'1991'}, u'sort-name': u'Joker, Jolly and the Plas
+tic Beatles of the Universe', u'score': u'50', u'type': u'Group', u'id': u'bcfaf9b8-d1f6-4a23-8
+ef9-ac85fdf95ec5'}], u'created': u'2015-07-15T22:03:50.513Z'}   

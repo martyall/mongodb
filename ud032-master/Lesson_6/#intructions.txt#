@@ -1,0 +1,12 @@
+processing the file:
+- process only 2 types of top level tags: "node" and "way"
+- turn all the attributes in these tages into regular key/val pairs except for the following particular instructions
+1. attrs in the "CREADTED" array should be added under the key "created"
+2. map "lat" and "lon" into an array called "pos", whose vals are floats, and used for geospacial indexing (internal to mongodb)
+3. if the second level tag "k" contains irregular chars, ignore it
+4. if the second level tag "k" starts with "addr:" but contains ":", put in a dictionary "address"
+5. if the second level tag "k" contains ":" but doesn't start with "addr", process it like the other tags
+6. if ther is a second ":" that separates the type/direction of a street, ignore the whole tag
+
+
+

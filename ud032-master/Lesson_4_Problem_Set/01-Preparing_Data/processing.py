@@ -5,7 +5,7 @@ In this problem set you work with another type of infobox data, audit it, clean 
 come up with a data model, insert it into a MongoDB and then run some queries against your database.
 The set contains data about Arachnid class.
 Your task in this exercise is to parse the file, process only the fields that are listed in the
-FIELDS dictionary as keys, and return a dictionary of cleaned values. 
+FIELDS dictionary as keys, and return a list of dictionaries of cleaned values. 
 
 The following things should be done:
 - keys of the dictionary changed according to the mapping in FIELDS dictionary
@@ -14,7 +14,8 @@ The following things should be done:
 - if a value of a field is "NULL", convert it to None
 - if there is a value in 'synonym', it should be converted to an array (list)
   by stripping the "{}" characters and splitting the string on "|". Rest of the cleanup is up to you,
-  eg removing "*" prefixes etc
+  eg removing "*" prefixes etc. If there is a singular synonym, the value should still be formatted
+  in a list.
 - strip leading and ending whitespace from all fields, if there is any
 - the output structure should be as follows:
 { 'label': 'Argiope',
@@ -31,6 +32,8 @@ The following things should be done:
                     'genus': None
                     }
 }
+  * Note that the value associated with the classification key is a dictionary with
+    taxonomic labels.
 """
 import codecs
 import csv
@@ -52,6 +55,33 @@ FIELDS ={'rdf-schema#label': 'label',
          'genus_label': 'genus'}
 
 
+def trim_redundant(label):
+    pass
+    m = re.compile(r'(.+)(\(.+\))')
+    if m.search(label):
+        return m.search(label).group(1).strip()
+    else:
+        return label.strip()
+
+def split_list(x):
+    m = re.compile(r'({)(.+)(})')
+    if m.search(x):
+        return map(lambda x: x.strip(), m.search(x).group(2).split('|'))
+    else:
+        return [x.strip()]
+   
+def set_label(line, field):
+    if line[field] == "NULL":
+         return None
+    else:
+        return trim_redundant(line[field])
+ 
+def contains_non_alphanum(s):
+    if re.search(r'\W', s):
+        return True
+    else:
+        return False
+
 def process_file(filename, fields):
 
     process_fields = fields.keys()
@@ -60,12 +90,31 @@ def process_file(filename, fields):
         reader = csv.DictReader(f)
         for i in range(3):
             l = reader.next()
-
+          
         for line in reader:
-            # YOUR CODE HERE
-            pass
+            entry = {'classification':{}}
+            for field in FIELDS.keys():
+                if FIELDS[field] == "label":
+                    #print line[field]
+                    entry[FIELDS[field]] = set_label(line, field)
+                elif FIELDS[field] == "name":
+                    if line[field] == "NULL" or contains_non_alphanum(line[field]):
+                        entry[FIELDS[field]] = set_label(line, 'rdf-schema#label')
+                    else:
+                        entry[FIELDS[field]] = line[field]
+                elif FIELDS[field] == 'synonym':
+                    entry[FIELDS[field]] = split_list(line[field])
+                elif FIELDS[field] in ['uri', 'description']:
+                    entry[FIELDS[field]] = line[field].strip()
+                else:
+                    e = line[field].strip()
+                    if e == "NULL":
+                        e = None
+                    entry['classification'][FIELDS[field]] = e
+            #print repr(entry) + "\n\n"
+            data.append(entry)
+                
     return data
-
 
 def parse_array(v):
     if (v[0] == "{") and (v[-1] == "}"):
@@ -79,24 +128,29 @@ def parse_array(v):
 
 def test():
     data = process_file(DATAFILE, FIELDS)
-
+    print "Your first entry:"
     pprint.pprint(data[0])
-    assert data[0] == {
-                        "synonym": None, 
-                        "name": "Argiope", 
-                        "classification": {
-                            "kingdom": "Animal", 
-                            "family": "Orb-weaver spider", 
-                            "order": "Spider", 
-                            "phylum": "Arthropod", 
-                            "genus": None, 
-                            "class": "Arachnid"
-                        }, 
-                        "uri": "http://dbpedia.org/resource/Argiope_(spider)", 
-                        "label": "Argiope", 
-                        "description": "The genus Argiope includes rather large and spectacular spiders that often have a strikingly coloured abdomen. These spiders are distributed throughout the world. Most countries in tropical or temperate climates host one or more species that are similar in appearance. The etymology of the name is from a Greek name meaning silver-faced."
-                    }
+    first_entry = {
+        "synonym": None, 
+        "name": "Argiope", 
+        "classification": {
+            "kingdom": "Animal", 
+            "family": "Orb-weaver spider", 
+            "order": "Spider", 
+            "phylum": "Arthropod", 
+            "genus": None, 
+            "class": "Arachnid"
+        }, 
+        "uri": "http://dbpedia.org/resource/Argiope_(spider)", 
+        "label": "Argiope", 
+        "description": "The genus Argiope includes rather large and spectacular spiders that often have a strikingly coloured abdomen. These spiders are distributed throughout the world. Most countries in tropical or temperate climates host one or more species that are similar in appearance. The etymology of the name is from a Greek name meaning silver-faced."
+    }
 
+    assert len(data) == 76
+    assert data[0] == first_entry
+    assert data[17]["name"] == "Ogdenia"
+    assert data[48]["label"] == "Hydrachnidiae"
+    assert data[14]["synonym"] == ["Cyrene Peckham & Peckham"]
 
 if __name__ == "__main__":
     test()

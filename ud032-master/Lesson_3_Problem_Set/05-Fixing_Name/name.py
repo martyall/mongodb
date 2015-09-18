@@ -16,14 +16,19 @@ import codecs
 import csv
 import pprint
 
+
 CITIES = 'cities.csv'
 
 
 def fix_name(name):
-
     # YOUR CODE HERE
-
-    return name
+    if name == "NULL" or name == "":
+        return []
+    else:
+        if name[0] == "{" and name[-1] == "}":
+            return name[1:-1].split("|")
+        else:
+            return [name]
 
 
 def process_file(filename):

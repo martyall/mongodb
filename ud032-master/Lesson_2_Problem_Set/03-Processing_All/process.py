@@ -42,11 +42,22 @@ def process_file(f):
     data = []
     info = {}
     info["courier"], info["airport"] = f[:6].split("-")
-    
     with open("{}/{}".format(datadir, f), "r") as html:
-
         soup = BeautifulSoup(html)
-
+        l1 = soup.find_all("tr")
+        l2 = filter(lambda x: "class" in x.attrs.keys(), l1)
+        d = filter(lambda x: x["class"] == [u'dataTDRight'], l2)
+        for flight in d:
+            stats = flight.find_all("td")[:-1]
+            if stats[1].text == "TOTAL":
+                pass
+            else:
+                info["year"] = int(stats[0].text)
+                info["month"] = int(stats[1].text)
+                info["flights"] = {}
+                info["flights"]["domestic"] = int(stats[2].text.replace(',',''))
+                info["flights"]["international"] = int(stats[3].text.replace(',',''))
+                data.append(info)   
     return data
 
 

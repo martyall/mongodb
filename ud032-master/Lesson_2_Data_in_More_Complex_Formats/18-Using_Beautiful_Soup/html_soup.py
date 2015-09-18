@@ -14,10 +14,15 @@ html_page = "page_source.html"
 def extract_data(page):
     data = {"eventvalidation": "",
             "viewstate": ""}
-    with open(page, "r") as html:
-        # do something here to find the necessary values
-        pass
-
+    soup = BeautifulSoup(open(html_page), "xml")
+    events = soup.find_all(id="__EVENTVALIDATION")
+    for event in events:
+        print event
+        data["eventvalidation"] = event["value"]
+    states = soup.find_all(id="__VIEWSTATE")
+    for state in states:
+        print state
+        data["viewstate"] = state["value"]
     return data
 
 
@@ -40,9 +45,9 @@ def make_request(data):
 
 def test():
     data = extract_data(html_page)
-    assert data["eventvalidation"] != ""
-    assert data["eventvalidation"].startswith("/wEWjAkCoIj1ng0")
+    print data["eventvalidation"] != ""
+    #print data["eventvalidation"].startswith("/wEWjAkCoIj1ng0")
     assert data["viewstate"].startswith("/wEPDwUKLTI")
-
+    
     
 test()

@@ -48,42 +48,40 @@ def audit_file(filename, fields):
     with open(filename) as f:
         reader = csv.DictReader(f)
         header = reader.fieldnames
-        for i in range(3):
-            reader.next()
         for row in reader:
             for field in FIELDS:
                 val = row[field]
-                if field == "point":
-                 #   x = True
-                    print val
-                #else:
-                 #   x = False
+                if field == "areaLand":
+                    x = True
+                    print "areaLand"
+                else:
+                    x = False
                 if val == "" or val == "NULL":
                     fieldtypes[field].add(type(None))
-                  #  if x:
-                   #     print row[field], type(None)
-                    #    print "\n"
+                    if x:
+                        print row[field], type(None)
+                        print "\n"
                     continue
                 elif is_number(val):
                     fieldtypes[field].add(type(convert_to_num(val)))
-                    #if x:
-                     #   print row[field], type(convert_to_num(val))
-                      #  print "\n"
+                    if x:
+                        print row[field], type(convert_to_num(val))
+                        print "\n"
                     continue
                 #elif re.search(r'')
                 elif val[0] == "{":
                     fieldtypes[field].add(type([1,2,3]))
-                    #if x:
-                     #   print row[field],  type([1,2,3])
-                      #  print "\n"
+                    if x:
+                        print row[field],  type([1,2,3])
+                        print "\n"
                     continue
                 else:
                     fieldtypes[field].add(type("s"))
-                    #if x:
-                       # print row[field], type("s")
-                        #print "\n"
+                    if x:
+                        print row[field], type("s")
+                        print "\n"
 
-    #print "fieldtypes:", fieldtypes
+    print "fieldtypes:", fieldtypes
     return fieldtypes
 
 
@@ -97,3 +95,9 @@ def test():
     
 if __name__ == "__main__":
     test()
+
+
+
+
+
+

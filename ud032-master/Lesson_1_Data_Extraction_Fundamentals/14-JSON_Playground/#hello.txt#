@@ -1,0 +1,31 @@
+
+obj, end, remaining = get_decoded_and_remainder(' '.join([encoded_object, extra_text]))
+print 'Object              :', obj
+print 'End of parsed input :', end
+print 'Remaining text      :', repr(remaining)
+
+print
+print 'JSON embedded:'
+try:
+    obj, end, remaining = get_decoded_and_remainder(
+        ' '.join([extra_text, encoded_object, extra_text])
+        )
+except ValueError, err:
+    print 'ERROR:', err
+
+
+obj, end, remaining = get_decoded_and_remainder(
+    ' '.join([extra_text, encoded_object, extra_text]))
+
+
+print "Object:", obj
+print "End:", end
+print "Remainder:", repr(remaining)
+
+print "\n JSON embedding \n"
+
+try:
+    obj, end, remaining = get_decoded_and_remainder(
+        ' '.join([extra_text, encoded_object, extra_text]))
+except ValueError, err:
+    print 'Error:', err
